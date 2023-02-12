@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react'
 import { baseUrl } from '../constants/movie'
 import { FaPlay } from 'react-icons/fa'
 import { InformationCircleIcon } from '@heroicons/react/20/solid'
+import { useRecoilState } from 'recoil'
+import { modalState, movieState } from '../atoms/modalAtom'
 
 interface Props {
   netflixOriginals: Movie[]
@@ -11,20 +13,14 @@ interface Props {
 
 function Banner({ netflixOriginals }: Props) {
   const [movie, setMovie] = useState<Movie | null>(null)
+  const [showModal, setShowModal] = useRecoilState(modalState)
+  const [currentMovie, setCurrentMovie] = useRecoilState(movieState)
 
   useEffect(() => {
     setMovie(
       netflixOriginals[Math.floor(Math.random() * netflixOriginals.length)]
     )
   }, [netflixOriginals])
-
-    function setCurrentMovie(movie: Movie | null) {
-        throw new Error('Function not implemented.')
-    }
-
-    function setShowModal(arg0: boolean) {
-        throw new Error('Function not implemented.')
-    }
 
   return (
     <div className="flex flex-col space-y-2 py-16 md:space-y-4 lg:h-[65vh] lg:justify-end lg:pb-12">
