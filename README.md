@@ -1,6 +1,5 @@
-Just a small clone front-end app of Netflix in order to get familiar with Next.js and Tailwind.css !
 
-# Next.js + Tailwind CSS Example
+# Just a small clone front-end app of Netflix in order to get familiar with Next.js and Tailwind.css !
 
 This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.2)](https://tailwindcss.com/blog/tailwindcss-v3-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
 
